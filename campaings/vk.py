@@ -14,7 +14,7 @@ async def get_vkAds_campaigns(access_token, account_id):
         'account_id': account_id,
         'include_deleted': 0,
         'v': '5.199'
-    }
+    }#
     async with aiohttp.ClientSession() as session:
         async with session.get(url, params=params,ssl=False) as response:
             if response.status == 200:
