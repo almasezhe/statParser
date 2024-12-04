@@ -71,7 +71,7 @@ async def get_column_data(sheet_id, column_range, credentials):
         # Запрашиваем данные из указанного диапазона
         result = sheet.values().get(spreadsheetId=sheet_id, range=column_range).execute()
 
-        # Возвращаем значения или пустой список, если диапазон пуст
+        # Возвращаем значения или пустой список, если диапазон пус
         return result.get('values', [])
     except Exception as e:
         print(f"Ошибка при получении данных из Google Sheets: {str(e)}")
