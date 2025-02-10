@@ -13,11 +13,11 @@ class CourseStates(StatesGroup):
     waiting_for_date_to = State()    # Ожидание конечной даты
 
 # Функция для получения данных из Google Sheets
-async def get_column_data(sheet_id, column, credentials):
-    service = build('sheets', 'v4', credentials=credentials)
-    sheet = service.spreadsheets()
-    result = sheet.values().get(spreadsheetId=sheet_id, range=f'{column}4:{column}').execute()
-    return result.get('values', [])
+#async def get_column_data(sheet_id, column, credentials):
+ #   service = build('sheets', 'v4', credentials=credentials)
+  #  sheet = service.spreadsheets()
+   # result = sheet.values().get(spreadsheetId=sheet_id, range=f'{column}4:{column}').execute()
+    #return result.get('values', [])
 
 
 # Функция для обновления данных в Google Sheets
@@ -1525,6 +1525,7 @@ async def getCourseDataYandex(message: Message, state: FSMContext):
     spreadId="1g7XWd9n00ngnr2ZjHijqrt3Rxx8hSxaIx-V_999kwG8"
     which_one = 3
     await getCourseData(message, state)
+    
 
 @dp.message(Command('getcourse_tgin'))
 async def getCourseDataTgIn(message: Message, state: FSMContext):

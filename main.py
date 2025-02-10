@@ -5,7 +5,6 @@ from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
-
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 spreadId = '1Tn0Y02OMSAGprBsLm_gM9c0awUHDVEI48TCACQEYJY4'
